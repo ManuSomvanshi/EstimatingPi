@@ -26,7 +26,6 @@ def main(darts):
     fig.suptitle("Plot with %d darts"%darts, fontsize=14, fontweight='bold')
     n=0
     count = 0
-    pi = 0
     while n<darts:
         (x,y) = throw_dart()
         if x**2 + y**2 <= 1:
@@ -35,7 +34,6 @@ def main(darts):
         ax.set_title("Our estimate of pi is %3.2f"%pi)
         plt.pause(0.0005)
         n+=1
-    pi = 4*(count/darts)
     plt.show()
 
-main(300)
+main(500)
